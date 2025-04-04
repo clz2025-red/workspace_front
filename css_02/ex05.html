@@ -8,25 +8,35 @@
         <style>
             table{
                 border-collapse: collapse;
-                text-align: center;
             }
 
             table>thead{
                 background-color: #d5d5d5;
             }
-            
-            table>thead>tr>th, table>tbody>tr>td{
-                border: 1px solid #000000;
+
+            table>thead>tr{ 
+                border-top: 2px solid #000000;
+                border-bottom: 2px solid #000000;
             }
 
-            table>tbody>tr:hover{
-                background-color: #ffff00;;
+            table>tbody>tr{
+                border-bottom: 2px dashed #000000;
             }
-          
 
-            .txt-l{
-                text-align: left;
+            /*
+            .last{
+                border-bottom: 2px solid #000000;
             }
+            */
+
+            table>tbody>tr:last-child{
+                border-bottom: 2px solid #000000;
+            }
+
+            table>tbody>tr:nth-child(2n-1){
+                background-color: aqua;
+            }
+
         </style>
     </head>
 
@@ -58,7 +68,7 @@
             <tbody>
                 <tr>
                     <td>123</td>
-                    <td class="txt-l">
+                    <td>
                         <a href="">123번 게시물입니다.</a>
                     </td>
                     <td>정우성</td>
@@ -68,7 +78,7 @@
                 </tr>
                 <tr>
                     <td>123</td>
-                    <td class="txt-l">
+                    <td>
                         <a href="">123번 게시물입니다.</a>
                     </td>
                     <td>정우성</td>
@@ -76,7 +86,7 @@
                     <td>2025-04-03</td>
                     <td>삭제</td>
                 </tr>
-                <tr>
+                <tr class="last">
                     <td>123</td>
                     <td class="txt-l">
                         <a href="">123번 게시물입니다.</a>
@@ -87,6 +97,9 @@
                     <td>삭제</td>
                 </tr>
             </tbody>
+            <tfoot>
+
+            </tfoot>
         </table>
 
 
