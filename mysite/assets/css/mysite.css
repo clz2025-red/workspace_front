@@ -13,19 +13,21 @@ body{
 
 #header{
     padding: 10px 0px 10px 0px;
-    /* border: 1px solid #000; */
+    border-bottom: 1px solid #585858;
 }
 
 #nav{
-    border: 1px solid #000;
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid #585858;
 }
 
 #content{
-    border: 1px solid #000;
+    padding: 20px 20px 20px 20px; 
 }
 
 #footer{
-    border: 1px solid #000;
+    padding: 10px 0px 10px 0px;
+    background-color: #dddddd;
 }
 /* /레이아웃 ************************/
 
@@ -50,9 +52,48 @@ body{
     border-radius: 3px;;
     background-color: #e3e3e3;
     border: 1px solid #c0c0c0;
+}
+/* /해더관련 *************************/
 
+/* 네비 ******************************/
 
+#nav ul>li{
+    width: 250px;
+    float: left;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* /네비 ******************************/
+
+/* 컨텐츠(메인) ******************************/
+#profile{
+    width: 300px;
+    float: left;
+    margin-right: 20px;
+}
+
+#greeting-box{
+    width: 630px;
+    float: left;
+}
+
+#greeting-box .greeting{
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#greeting-box .introduce{
+    font-size: 15px;
 }
 
 
-/* /해더관련 *************************/
+/* /컨텐츠(메인) ******************************/
+
+/* 푸터 ******************************/
+#footer p{
+    text-align: center;
+}
+/* 푸터 ******************************/
