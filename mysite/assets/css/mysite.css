@@ -1,4 +1,7 @@
 @charset "UTF-8";
+/********************************
+ * MySite 공통
+********************************/
 
 /* 레이아웃 ************************/
 body{
@@ -21,8 +24,25 @@ body{
     border-bottom: 1px solid #585858;
 }
 
+/* 1단 */
 #content{
     padding: 20px 20px 20px 20px; 
+}
+
+/* 2단 */
+#content2{
+    padding: 20px 0px 20px 0px;
+}
+
+#content2 #aside{
+    width: 180px;
+    margin-right: 20px;
+    float: left;
+}
+
+#content2 #main{
+    width: 798px;
+    float: left;
 }
 
 #footer{
@@ -67,30 +87,58 @@ body{
 
 /* /네비 ******************************/
 
-/* 컨텐츠(메인) ******************************/
-#profile{
-    width: 300px;
-    float: left;
-    margin-right: 20px;
+
+
+/* 컨텐츠2(게시판리스트) ******************************/
+#aside h2{
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #dddddd;
 }
 
-#greeting-box{
-    width: 630px;
-    float: left;
+#aside ul>li{
+    padding: 8px 10px 8px 10px;
+    margin: 5px 0px 0px 0px; 
+    font-size: 15px;
+    border: 1px solid #a6a6a6;
 }
 
-#greeting-box .greeting{
-    margin-bottom: 20px;
+#main #main-head{
+    padding: 15px 0px 10px 0px;
+    border-bottom: 1px solid #000;;
+}
+
+#main #main-head h3{
+    float: left;
     font-size: 20px;
     font-weight: bold;
 }
+#main #main-head ol {
+    float: right;
+    margin-top: 10px;
+}
 
-#greeting-box .introduce{
-    font-size: 15px;
+#main #main-head ol>li{
+    float: left;
+}
+
+#main #main-head ol>li::after{
+    content: ">";
+    padding: 0px 3px 0px 3px;
+}
+
+#main #main-head ol>li:last-child::after{
+    content: "";
+    padding: 0px 0px 0px 0px;
 }
 
 
-/* /컨텐츠(메인) ******************************/
+/* 컨텐츠2(게시판리스트) ******************************/
+
 
 /* 푸터 ******************************/
 #footer p{
