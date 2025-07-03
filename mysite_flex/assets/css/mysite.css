@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
 /* 레이아웃 */
+body{
+    
+}
+
 #wrap{
     width: 1000px;
     margin: 0 auto;
@@ -73,3 +77,10 @@ nav ul>li{
     line-height: 50px;
 }
 /* /네비 ***************************/
+
+
+
+/* 공통 */
+/* 버튼 */
+
+

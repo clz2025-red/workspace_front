@@ -35,7 +35,7 @@ body{
 }
 
 #content2 #aside{
-    width: 180px;
+    width: 160px;
     margin-right: 20px;
     float: left;
 }
@@ -91,7 +91,7 @@ body{
 
 /* 컨텐츠2(게시판리스트) ******************************/
 #aside h2{
-    width: 180px;
+    width: 160px;
     height: 60px;
     line-height: 60px;
     font-size: 20px;
