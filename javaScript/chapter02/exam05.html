@@ -32,15 +32,48 @@
 
 	<a href="https://www.naver.com" target="_blank">네이버</a>
 
-
 	<p id="p01">자바<strong>스크립트</strong></p>
 	<p id="p02">자바<strong>스크립트</strong></p>
-</body>
 
+
+
+<!-- -------------------------------------------------------- -->
 <script>
+//#nav 의 태그명이 뭔지 알고 싶다
+let tag01 = document.querySelector('#nav');
+console.log(tag01);
+console.log(tag01.tagName);  //#nav의 태그네임 --> 대문자
 
+
+//target='_blank' 의 태그네임
+let tag02 = document.querySelector('a[target="_blank"]');
+console.log(tag02);
+console.log(tag02.tagName);
+
+//아이디 알아내기
+let tag03 = document.querySelector('div');
+console.log(tag03);
+console.log(tag03.id);
+
+//li태그가져와서 각각의 id 출력하기
+let tag04s = document.querySelectorAll('li');
+console.log(tag04s);
+for(let i=0; i<tag04s.length; i++){
+	console.log(tag04s[i].id);
+}
+
+//클래스명 알아내기
+//라벨을 가져와서 각각의 클래스명을 출력하세요
+tagName
+id
+className
+
+//a요소 가져와서 클래스명을 출력하세요
 
 
 </script>
+
+</body>
+
 
 </html>

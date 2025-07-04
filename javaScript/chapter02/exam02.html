@@ -31,9 +31,23 @@ document.addEventListener('DOMContentLoaded', function(){
 	//요소(태그)로 찾기  ///////////////////////////////////////////////
 
 	//li요소 찾기
-	let liTags =document.getElementsByTagName('li');
+	let liTags = document.getElementsByTagName('li');
 	console.log(liTags);
 	liTags[0].style.color='#ff0000';
+	liTags[3].style.color='#0000ff';
+
+	//h1 초록색 #00ff00;   ---> 해당요소 1개라고 배열로 온다
+	let h1Tags = document.getElementsByTagName('h1');
+	console.log(h1Tags);
+	h1Tags[0].style.color = '#00ff00';
+
+	//모든 p요소를 파란색으로 변경 --> 배열로 오기때문에 모두 변경은 for문 사용
+	let pTags = document.getElementsByTagName('p');
+	console.log(pTags);
+	for(let i=0; i<pTags.length; i++){
+		pTags[i].style.color='#0000ff';
+	}
+
 
 });
 
