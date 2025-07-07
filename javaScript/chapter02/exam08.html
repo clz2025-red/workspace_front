@@ -47,16 +47,62 @@
 				<td id="h-3">010-3333-3333</td>
 				<td>02-3333-3333</td>
 			</tr>
+			<tr id="n-3">
+				<td>황일영</td>
+				<td id="h-3">010-3333-3333</td>
+				<td>02-3333-3333</td>
+			</tr>
 		</tbody>
 	</table>
 
+
+<!---------------------------------------------->
 <script>
+// 돔트리가 완성되었을때
+document.addEventListener('DOMContentLoaded',function(){
+	console.log('완료');
+
+	//배열(리스트)
+	let personList = [];
+
+	let trTags = document.querySelectorAll('tbody>tr');
+	/*
+	console.log(trTags);
+	console.log(trTags[0].children);
+	console.log(trTags[0].children[0].innerText);
+	*/
+
+	//tr의 갯수만큼 반복
+	for(let i=0; i<trTags.length; i++){
+		//데이터 추출
+		let name = trTags[i].children[0].innerText;
+		let hp = trTags[i].children[1].innerText;
+		let company = trTags[i].children[2].innerText;
+
+		//객체 생성(VO로 묶는다)
+		let personVO = {	
+			name: name, 
+			hp: hp, 
+			company: company
+		};
+
+		//객체(VO)를 배열에 추가한다
+		personList.push(personVO);
+	}
+
+	//console.log(personList);
+
+	for(let i=0; i<personList.length; i++){
+		console.log(personList[i].name+'('   + personList[i].hp  +  ')' );
+	}
+
+
+});
+
 
 
 </script>
-
-
 </body>
 
-
+console
 </html>
