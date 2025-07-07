@@ -38,19 +38,23 @@
 document.addEventListener('DOMContentLoaded', function(){
     console.log('돔트리완료');
 
+
     //버튼에 이벤트 등록(*버튼잡아온다) 
     let btnTag = document.querySelector('#btnPlus');
     //console.log(btnTag);
     btnTag.addEventListener('click', function(){
         console.log('버튼클릭');
         
-        //(첫번째창 잡아오기)첫번째 창의 value값 가져오기    
+        //태그 가져오기(잡아오기... 조금 힘들다)
         let leftTag = document.querySelector('#left');
+        let rightTag = document.querySelector('#right');
+        let pTag = document.querySelector('#display');
+
+        //(첫번째창 잡아오기)첫번째 창의 value값 가져오기    
         let leftNo = Number.parseInt(leftTag.value);  //value값은 string -->number로 변경해줌
         //console.log(typeof leftNo);
 
         //(두번째창 잡아오기)두번째 창의 value값 가졍오기
-        let rightTag = document.querySelector('#right');
         let rightNo = Number.parseInt(rightTag.value); //value값은 string -->number로 변경해줌
         //console.log(typeof rightNo);
         
@@ -59,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function(){
         console.log(sum);
 
         //(p요소 잡아오기)p요소에 더한값 적용하기
-        let pTag = document.querySelector('#display');
         pTag.textContent = sum;
 
         //입력창을 비우기
