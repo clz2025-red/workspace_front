@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang=""ko>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- css -->
+<style>
+	.red {color: red; font-size: 20px; font-weight: bold;}
+	.blue {color: blue; font-size: 50px; border: 1px solid black;}
+</style>
+<!-- js -->
+<script src="../assets/js/jquery-3.7.1.js"></script>
+
+</head>
+
+<body>
+
+	<!--addClass(), removeClass()-->
+	<ul>
+		<li id="first" class="red abc">첫번째 아이템입니다.</li>
+		<li id="second" class="blue"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del">세번째아이템입니다.</li>
+		<li><strong>네번째 아이템입니다.</strong></li>
+		<li>다섯번째 아이템입니다.</li>
+	</ul>
+
+<!-- -------------------------------------------- -->
+<script>
+$(document).ready(function(){
+	console.log('돔트리완료');
+
+	let fiTag = $('#first');
+	console.log(fiTag);
+	//fiTag.removeClass('red');
+	//fiTag.addClass('blue');
+	fiTag.removeClass();
+});
+
+
+</script>
+</body>
+
+
+
+
+</html>

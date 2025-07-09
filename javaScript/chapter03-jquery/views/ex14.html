@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<!-- css -->
+	<style>
+		ul {
+			background-color: blue; 
+			padding: 20px;
+		}
+		li {
+			background-color: gray;
+			border: 1px solid black; 
+		}
+	</style>
+	<!-- js -->
+	<script src="../assets/js/jquery-3.7.1.js"></script>
+</head>
+<body>
+	
+	<ul>
+		<li id="first" class="red" data-bno="1" data-pname="정우성">첫번째 아이템입니다.</li>
+		<li id="second" class="blue" data-bno="2" data-pname="정우성"><strong>두번째 아이템입니다.</strong></li>
+		<li id="third" class="del" data-bno="3" data-pname="유재석">세번째아이템입니다.</li>
+		<li data-bno="4" data-pname="박명수"><strong>네번째 아이템입니다.</strong></li>
+		<!-- 3개 -->
+	</ul>
+	<button id="btn" type="button">li요소추가</button>
+	<br>
+	<br>
+	<button id="btnData" type="button">전체데이터수집</button>
+	
+	
+<script>
+$(document).ready(function(){
+	console.log('톰트리준비 완료');
+
+	//li요소추가 버튼을 클릭했을때
+	$('#btn').on('click', function(){
+		console.log('클릭');
+		
+		let str ='';
+		str += '<li data-bno="5" data-pname="이효리">다섯번째 아이템입니다.</li>';
+		str += '<li data-bno="6" data-pname="김종국">여섯번째 아이템입니다.</li>'
+		str += '<li data-bno="7" data-pname="서장훈">일곱번째 아이템입니다.</li>'
+		
+		$('ul').append(str);
+	});
+
+	/*
+	//li태그(요소)를 클릭했을때
+	$('li').on('click', function(){
+		console.log('li태그 클릭');
+		let $this = $(this);
+		console.log($this);
+		console.log($this.text())
+	});
+	*/
+
+	//ul태그(요소)를 클릭했을때
+	$('ul').on('click', 'li', function(){
+		console.log('클릭');
+		let $this = $(this);
+		console.log($this.text());
+	});
+
+	//btnData 클릭했을때
+	$('#btnData').on('click', function(){
+		console.log('버튼 클릭');
+
+		let liTags = $('ul>li');
+		console.log(liTags);
+
+	
+		/*
+		//js 반복문 사용
+		for(let i=0; i<liTags.length; i++){
+			let name = $(liTags[i]).data('pname');
+			console.log(name);
+		}
+		*/
+
+		//jquery 에 반복문 사용
+		liTags.each(function(index, item){
+			//console.log(index);
+			//console.log(item);
+			//item은 자바스크립트변수 data()를 가지고 있지 않다
+			//item자바스크립트변수를 jquery용으로 변형시킨다  
+			//data()는 jquery용으로 js에는 없는함수
+
+			let bno = $(item).data('bno');
+			let pname = $(item).data('pname');
+	
+			console.log(bno);
+			console.log(pname);
+
+		});
+
+	});
+
+
+
+});	
+</script>	
+</body>
+
+</html>
